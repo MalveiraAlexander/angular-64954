@@ -1,4 +1,4 @@
-<div *ngIf="control.invalid && (control.dirty || control.touched)">
+<div *ngIf="control?.invalid && (control.dirty || control.touched)">
   <small *ngIf="control.errors['required']" id="float-input" class="text-danger">El campo {{name}} es requerido.</small>
   <small *ngIf="control.errors['minlength']" id="float-input" class="text-danger">El campo {{name}} necesita al menos {{control.errors['minlength'].requiredLength}} caracteres.</small>
   <small *ngIf="control.errors['maxlength']" id="float-input" class="text-danger">El campo {{name}} no de contener más de {{control.errors['maxlength'].requiredLength}} caracteres.</small>

@@ -1,1 +1,37 @@
-<p>template works!</p>
+<div class="container-fluid">
+  <div class="row justify-content-start">
+    <button class="btn btn-danger" routerLink="/reactive">Reactivo</button>
+  </div>
+  <div class="row justify-content-center mt-3 text-center">
+    <h1>Formularios Templates</h1>
+  </div>
+  <div class="row justify-content-center mt-3">
+    <div class="col-4">
+      <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+        <div class="mb-3">
+          <label for="name" class="form-label">Nombre</label>
+          <input [(ngModel)]="user.name" required minlength="2" maxlength="150" name="name" type="text" class="form-control" id="name">
+          <app-validator [control]="form.controls['name']" name="Nombre"></app-validator>
+        </div>
+        <div class="mb-3">
+          <label for="lastname" class="form-label">Apellido</label>
+          <input [(ngModel)]="user.lastname" required minlength="2" maxlength="150" name="lastname" type="text" class="form-control" id="lastname" >
+          <app-validator [control]="form.controls['lastname']" name="Apellido"></app-validator>
+        </div>
+        <div class="mb-3">
+          <label for="date" class="form-label">Fecha de nacimiento</label>
+          <input [(ngModel)]="user.date" required name="date" type="date" class="form-control" id="date" >
+          <app-validator [control]="form.controls['date']" name="Fecha de nacimiento"></app-validator>
+        </div>
+        <div class="mb-3 form-check">
+          <input [(ngModel)]="user.hasAlcohol" [disabled]="!isAdult" name="hasAlcohol" type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Lleva alcohol?</label>
+        </div>
+        <button type="submit" [disabled]="form.invalid" class="btn btn-primary">Enviar Solicitud</button>
+      </form>
+    </div>
+  </div>
+  <div class="row justify-content-center mt-3">
+    <p>{{user | json}}</p>
+  </div>
+</div>
