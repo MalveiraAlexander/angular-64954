@@ -1,0 +1,15 @@
+.e-button {
+  width: auto;
+  height: auto;
+  padding: 1rem;
+  background: #bd0000;
+  color: white;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.e-button:hover {
+  transition: all 0.3s ease-in-out;
+  background: #ff0000;
+}

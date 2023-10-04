@@ -1,0 +1,15 @@
+<div class="e-button" (click)="click()">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div *ngIf="loading" class="col-auto">
+        <i class="fa-duotone fa-loader"></i>
+      </div>
+      <div class="col-auto">
+        <span>{{label}}</span>
+      </div>
+      <div *ngIf="icon" class="col-auto">
+        <i [class]="icon"></i>
+      </div>
+    </div>
+  </div>
+</div>
