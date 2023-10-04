@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Juliana Figueroa",
+      "role": "Estudiante"
+    },
+    {
+      "id": 2,
+      "name": "Ariel Manzione",
+      "role": "Estudiante"
+    },
+    {
+      "id": 3,
+      "name": "Christopher Arteaga",
+      "role": "Estudiante"
+    },
+    {
+      "id": 4,
+      "name": "Alexander Malveira",
+      "role": "Instructor"
+    },
+    {
+      "id": 5,
+      "name": "Candela Campos",
+      "role": "Asistente Académica"
+    }
+  ]
+
+}

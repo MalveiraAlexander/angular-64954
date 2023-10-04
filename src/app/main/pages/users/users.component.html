@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <div class="row">
+    <h2>Usuarios</h2>
+  </div>
+  <div class="row justify-content-start">
+    <div *ngFor="let user of users" class="col-12 col-sm-4 col-md-4 col-lg-3 col-xl-3 col-xxl-2 mt-4">
+      <div class="card p-3">
+        <div class="container-fluid">
+          <div class="row">
+            <h5>{{user.name}}</h5>
+          </div>
+          <div class="row">
+            <p>{{user.role}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
