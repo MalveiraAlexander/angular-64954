@@ -24,7 +24,21 @@
       "id": 5,
       "name": "Candela Campos",
       "role": "Asistente Académica"
+    },
+    {
+      "name": "Yilber Sisco",
+      "role": "Infraestructura",
+      "id": 6
+    },
+    {
+      "name": "Matias Herrera",
+      "role": "Estudiante",
+      "id": 7
+    },
+    {
+      "name": "Federico Diaz",
+      "role": "Estudiante",
+      "id": 8
     }
   ]
-
 }

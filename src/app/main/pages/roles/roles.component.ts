@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./roles.component.scss']
 })
 export class RolesComponent {
-
+  type: string = 'dequemehablas?';
 }

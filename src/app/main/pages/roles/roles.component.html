@@ -1,1 +1,6 @@
 <p>roles works!</p>
+<div [ngSwitch]="type">
+  <div *ngSwitchCase="'flor'"><h1 class="rojo">La Flor es roja</h1></div>
+  <div *ngSwitchCase="'suculenta'"><h1 class="verde">La Suculenta es verde oscuro</h1></div>
+  <div *ngSwitchDefault>No te entendi!</div>
+</div>

@@ -1,0 +1,29 @@
+<div class="container-fluid animate__animated animate__fadeIn animate__faster">
+  <div class="row justify-content-center text-center">
+    <h2 *ngIf="id == 0;else edit">Alta de usuario</h2>
+  </div>
+  <div class="row justify-content-start">
+    <div class="col-auto">
+      <button class="btn btn-warning" routerLink="/main/users" >Volver</button>
+
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-6 col-lg-4">
+      <form [formGroup]="form" class="w-100" (ngSubmit)="save()">
+        <div class="mb-3">
+          <label for="name-user" class="form-label">Nombre *</label>
+          <input formControlName="nombre" type="text" class="form-control" id="name-user">
+        </div>
+        <div class="mb-3">
+          <label for="role-user" class="form-label">Rol *</label>
+          <input formControlName="role" type="text" class="form-control" id="role-user">
+        </div>
+        <button class="btn btn-success w-25" [disabled]="form.invalid" type="submit">Guardar</button>
+      </form>
+    </div>
+  </div>
+</div>
+<ng-template #edit>
+  <h2>Editar de usuario</h2>
+</ng-template>

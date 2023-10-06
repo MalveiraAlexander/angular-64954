@@ -2,6 +2,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { UserResponse } from '../../models/responses/users.response';
 import { UsersService } from './../../services/users/users.service';
 import { Component, OnInit, inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-users',
@@ -13,7 +14,9 @@ export class UsersComponent implements OnInit {
 
   users: UserResponse[] = [];
 
+
   private userService = inject(UsersService);
+  private router = inject(Router);
 
   ngOnInit(): void {
     this.getUsers();
@@ -42,6 +45,23 @@ export class UsersComponent implements OnInit {
     // }, () => {
     //   console.log('Listo!');
     // });
+  }
+
+
+  goToEdit(user: UserResponse) {
+    this.router.navigate([`/main/users/edit/${user.id}`])
+  }
+
+  deleteUser(user: UserResponse) {
+    this.userService.deleteUser(user.id).subscribe({
+      next: () => {},
+      error: (err) => {
+        console.log(err);
+      },
+      complete: () => {
+        this.getUsers();
+      }
+    });
   }
 
 }

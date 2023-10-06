@@ -1,6 +1,11 @@
-<div class="container-fluid">
+<div class="container-fluid animate__animated animate__fadeIn animate__faster">
   <div class="row">
     <h2>Usuarios</h2>
+  </div>
+  <div class="row justify-content-end">
+    <div class="col-auto">
+      <button class="btn btn-success" routerLink="/main/users/add" >Agregar</button>
+    </div>
   </div>
   <div class="row justify-content-start">
     <div *ngFor="let user of users" class="col-12 col-sm-4 col-md-4 col-lg-3 col-xl-3 col-xxl-2 mt-4">
@@ -11,6 +16,14 @@
           </div>
           <div class="row">
             <p>{{user.role}}</p>
+          </div>
+          <div class="row">
+            <div class="col-auto">
+              <button type="button" class="btn btn-info" (click)="goToEdit(user)">Editar</button>
+            </div>
+            <div class="col-auto">
+              <button type="button" class="btn btn-danger" (click)="deleteUser(user)">Eliminar</button>
+            </div>
           </div>
         </div>
       </div>
