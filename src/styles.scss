@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+.acrylic {
+  background-color: rgba(7, 7, 7, 0.5) !important;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}

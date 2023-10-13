@@ -3,10 +3,11 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { UserResponse } from '../../models/responses/users.response';
 import { UserRequest } from '../../models/requests/user.request';
+import { environment } from "../../../../environments/environment";
 
 @Injectable()
 export class UsersService {
-  private readonly API_URL = 'http://localhost:3000/';
+  private readonly API_URL = environment.URL_API;
   constructor(private http: HttpClient) { }
 
   getUsers(): Observable<UserResponse[]> {

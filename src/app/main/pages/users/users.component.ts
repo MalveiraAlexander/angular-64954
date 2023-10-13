@@ -30,7 +30,7 @@ export class UsersComponent implements OnInit {
       },
       error: (err: HttpErrorResponse) => {
         console.log('Error!', err);
-        alert(`Error! - ${err.statusText}`)
+        
       },
       complete: () => {
         console.log('Listo!');

@@ -1,9 +1,9 @@
 {
   "users": [
     {
-      "id": 1,
       "name": "Juliana Figueroa",
-      "role": "Estudiante"
+      "role": "Estudiante",
+      "id": 1
     },
     {
       "id": 2,
@@ -39,6 +39,16 @@
       "name": "Federico Diaz",
       "role": "Estudiante",
       "id": 8
+    },
+    {
+      "name": "ahora si pude",
+      "role": "1",
+      "id": 9
+    },
+    {
+      "name": "Probando probando",
+      "role": "Rol prueba",
+      "id": 10
     }
   ]
 }
